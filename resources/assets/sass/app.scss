@@ -4,9 +4,15 @@
 @import "variables";
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+<<<<<<< HEAD
 //main style
 html,
 body {
+=======
+
+//main style
+html, body {
+>>>>>>> master
   background-color: #fff;
   color: #636b6f;
   font-family: 'Raleway', sans-serif;
@@ -43,7 +49,11 @@ body {
   font-size: 84px;
 }
 
+<<<<<<< HEAD
 .links>a {
+=======
+.links > a {
+>>>>>>> master
   color: #636b6f;
   padding: 0 25px;
   font-size: 12px;

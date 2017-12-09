@@ -15,12 +15,6 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->enum('plateform', ['YouTube', 'Lynda', 'Coursera', 'Udemy', 'edX', 'Codeschool', 'Codeacademy', 'Treehouse', 'Udacity', 'W3schools', 'FreeCodeCamp', 'pluralsight', 'Microsoft Virtual Academy', 'Sololearn', 'programmr', 'Mozilla Developer Network', 'Eduonix', 'Laracast', 'Scotch', 'Tutplus', 'Tutorialzine', 'Video2Brain', 'openclassrooms', 'Skillshare', 'Alison', 'linuxAcademy', 'FutureLearn', 'Gymnasium', 'other']);
-            $table->string('url');
-            $table->date('startDate');
-            $table->date('finishDate');
-            $table->text('description');
             $table->timestamps();
         });
     }

@@ -1,4 +1,41 @@
 @extends('layouts.app')
+
+@section('title', 'My Courses')
+@section('description', 'this is a description')
 @section('main')
 
-<h1>THIS IS COURSES PAGE</h1>
+
+<div class="container">
+
+  <h1 class="center">THIS IS COURSES PAGE</h1>
+  <div class="row">
+    @if( !$courses->count() )
+      <p> You haven't add any Courses yet !</p>
+    @else  
+      @foreach($courses as $course)
+        <div class="col s3">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">{{$course->title}}</span>
+              <p>{{$course->description}}</p>
+            </div>
+            <div class="card-action">
+              <a href="{{$course->url}}">View Course</a>
+              <a href="#">Edit Course</a>
+            </div>
+          </div>
+        </div>
+      @endforeach
+    @endif  
+  </div>
+
+  <div class="course-add">
+    <a href="{{ url('/courses/create') }}">
+      <button class="btn waves-effect waves-light" type="button" value="course add" name="addCourse">Add a Course
+        <i class="material-icons">add</i>
+    </button></a>
+  </div>
+
+
+
+</div>

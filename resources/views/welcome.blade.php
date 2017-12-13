@@ -11,11 +11,9 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-<<<<<<< HEAD
-        <link rel="stylesheet" href="../../assets/sass/app.scss">
-=======
+        <link rel="stylesheet" href="{!! url('css/materialize.min.css') !!}">
+        <link rel="stylesheet" href="{!! url('css/style.css') !!}">
         <link rel="stylesheet" href="../assets/sass/app.scss">
->>>>>>> master
     </head>
     <body>
         <div class="flex-center position-ref full-height">

@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/courses', 'courseController@index')->name('courseIndex');
+Route::get('/courses/create', 'courseController@create')->name('courseCreate');
+Route::get('/courses/store', 'courseController@store')->name('courseStore');
+
+
 Route::get('/articles', 'articleController@index')->name('articleIndex');
 Route::get('/tutorials', 'tutorialController@index')->name('tutorialIndex');
+
 
 
 // Route::get('/courses', function ()

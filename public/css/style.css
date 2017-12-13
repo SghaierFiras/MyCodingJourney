@@ -1,0 +1,42 @@
+.title {
+  font-size: 84px;
+}
+
+.links>a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  max-width: 400px;
+  margin: 50px auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: inline-block;
+}
+
+.course-thumb {
+  height: 200px;
+  width: 200px;
+}
+
+.bg-grey {
+  background-color: grey;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.center {
+  text-align: center
+}

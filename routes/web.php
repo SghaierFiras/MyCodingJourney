@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Route::get('/courses', 'courseController@index')->name('courseIndex');
 Route::get('/courses/create', 'courseController@create')->name('courseCreate');
-Route::get('/courses/store', 'courseController@store')->name('courseStore');
+Route::post('/courses/store', 'courseController@store')->name('courseStore');
 
 
 Route::get('/articles', 'articleController@index')->name('articleIndex');

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Input;
+use Validator;
+use Redirect;
+use Mail;
 use App\Course;
 class courseController extends Controller
 {
@@ -15,18 +19,21 @@ class courseController extends Controller
 
     public function create(Course $course){
         //create a new course
-        $courses= Course::all();
-        return view('courses.create', ['courses'=>$courses]);
 
-        
+        $course =new Course;
+        return view('courses.create', ['course'=>$course]); 
 
     }
 
-    public function store(Course $course){
+    public function store(Request $request){
+        
+        $course=Course::create($request->all());
+        return redirect()->action('courseController@index')->with('message', 'Course Added');;
+    }
+    
+    public function show($id){
+    
+        
 
-        //store the new created course
-        $input= Input::all();
-        Course::create($input);
-        return Redirect::route('courses.index')->with('message', 'Course Added');
     }
 }

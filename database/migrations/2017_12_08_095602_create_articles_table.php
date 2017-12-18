@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->enum('plateform', ['YouTube', 'Lynda', 'Coursera', 'Udemy', 'edX', 'Codeschool', 'Codeacademy', 'Treehouse', 'Udacity', 'W3schools', 'FreeCodeCamp', 'pluralsight', 'Microsoft Virtual Academy', 'Sololearn', 'programmr', 'Mozilla Developer Network', 'Eduonix', 'Laracast', 'Scotch', 'Tutplus', 'Tutorialzine', 'Video2Brain', 'openclassrooms', 'Skillshare', 'Alison', 'linuxAcademy', 'FutureLearn', 'Gymnasium', 'other']);
             $table->string('url');
             $table->date('readDate');
-            $table->text('description');
+            $table->varchar('description');
             $table->timestamps();
         });
     }

@@ -12,8 +12,6 @@
     <link href="{!! url('css/style.css') !!}" rel="stylesheet">
     <link rel="styelesheet" href="{!! url('fonts/fontawesome.scss') !!}">
 
-    <!-- javascript  -->
-   
     <!-- fonts & ions -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 

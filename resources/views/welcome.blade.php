@@ -12,6 +12,7 @@
 
         <!-- Styles -->
 <<<<<<< HEAD
+<<<<<<< HEAD
         <link rel="stylesheet" href="../../assets/sass/app.scss">
 =======
 <<<<<<< HEAD
@@ -20,6 +21,11 @@
         <link rel="stylesheet" href="../assets/sass/app.scss">
 >>>>>>> master
 >>>>>>> e4a46acfeaaa8d9f67c9d654393adf81721c7af2
+=======
+        <link rel="stylesheet" href="{!! url('css/materialize.min.css') !!}">
+        <link rel="stylesheet" href="{!! url('css/style.css') !!}">
+        <link rel="stylesheet" href="../assets/sass/app.scss">
+>>>>>>> 4bf63ef089ea469563ce584aa1fb2ee0d001a950
     </head>
     <body>
         <div class="flex-center position-ref full-height">

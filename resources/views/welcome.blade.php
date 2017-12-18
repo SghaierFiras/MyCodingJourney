@@ -11,7 +11,15 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+<<<<<<< HEAD
         <link rel="stylesheet" href="../../assets/sass/app.scss">
+=======
+<<<<<<< HEAD
+        <link rel="stylesheet" href="../../assets/sass/app.scss">
+=======
+        <link rel="stylesheet" href="../assets/sass/app.scss">
+>>>>>>> master
+>>>>>>> e4a46acfeaaa8d9f67c9d654393adf81721c7af2
     </head>
     <body>
         <div class="flex-center position-ref full-height">

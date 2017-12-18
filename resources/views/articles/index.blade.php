@@ -20,7 +20,8 @@
             </div> 
             <div class="card-action"> 
               <a href="{{$article->url}}">View Article</a><br>
-              <a href="#">Edit Article</a> 
+              <a href="{{url('/articles/edit')}}">Edit Article</a> 
+              <a href="{{url('/articles/delete')}}">Delete Article</a> 
             </div> 
           </div> 
         </div> 

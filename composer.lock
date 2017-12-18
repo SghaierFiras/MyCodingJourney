@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "b3e44690861e82e74764f562bab1ba42",
-=======
     "content-hash": "748137740cbf6039e81efcb214cb20d2",
->>>>>>> 4bf63ef089ea469563ce584aa1fb2ee0d001a950
     "packages": [
         {
             "name": "aura/session",
@@ -3609,6 +3605,7 @@
         {
             "name": "phpunit/phpunit",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "6.5.5",
             "source": {
                 "type": "git",
@@ -3631,6 +3628,18 @@
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1b2f933d5775f9237369deaa2d2bfbf9d652be4c",
                 "reference": "1b2f933d5775f9237369deaa2d2bfbf9d652be4c",
 >>>>>>> 4bf63ef089ea469563ce584aa1fb2ee0d001a950
+=======
+            "version": "6.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "83d27937a310f2984fd575686138597147bdc7df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/83d27937a310f2984fd575686138597147bdc7df",
+                "reference": "83d27937a310f2984fd575686138597147bdc7df",
+>>>>>>> c4534c0eaae365aedc913e42fd70bdfcf63889b3
                 "shasum": ""
             },
             "require": {
@@ -3702,10 +3711,14 @@
                 "xunit"
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2017-12-17T06:31:19+00:00"
 =======
             "time": "2017-12-10T08:06:19+00:00"
 >>>>>>> 4bf63ef089ea469563ce584aa1fb2ee0d001a950
+=======
+            "time": "2017-12-17T06:31:19+00:00"
+>>>>>>> c4534c0eaae365aedc913e42fd70bdfcf63889b3
         },
         {
             "name": "phpunit/phpunit-mock-objects",

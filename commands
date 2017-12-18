@@ -1,5 +1,23 @@
+//project setup 
 sudo apt-get install python-software-properties
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get install -y php7.2
 sudo apt-get install -y php7.2
 sudo apt-get install php7.2-mysql php7.2-curl php7.2-json php7.2-cgi php7.2-xsl
+
+
+//database commands
+php artisan key:generate
+php artisan make:model Course --migration
+php artisan make:controller courseController
+php artisan make:model Article --migration
+php artisan make:controller articleController
+php artisan make:model Tutorial --migration
+php artisan make:controller tutorialController
+
+
+
+//git commands 
+git push --set-upstream origin index-page
+git push origin master  --allow-unrelated-histories
+git remote set-url origin git@github.com:SghaierFiras/MyCodingJourney.git

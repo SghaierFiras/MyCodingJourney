@@ -1,10 +1,12 @@
-
    {!! Form::token() !!}
 
   <div class="row">
     <div class="input-field col s4"> 
        {{ Form::text('title', null, ['class'=>'validate']) }}
        {{ Form::label('title', 'Title') }}
+       @if($errors->has('title'))
+        <p class="red-text">{{$errors->first('title')}}</p> 
+       @endif
     </div>
   </div>
 
@@ -12,20 +14,29 @@
     <div class="input-field col s4">
        {{ Form::url('url', null, ['class'=>'validate']) }}
        {{ Form::label('url', 'URL', ['data-error'=>'wrong',  'data-success'=>'right']) }}
+       @if($errors->has('url'))
+        <p class="red-text">{{$errors->first('url')}}</p> 
+       @endif
     </div>
   </div>
 
   <div class="row">
     <div class="input-field col s4">
-      {{Form::date('startDate', date($course->startDate), ['class'=>'datepicker'])}}
+      {{Form::date('startDate', \Carbon\Carbon::now(), ['class'=>'datepicker'])}}
       {{Form::label('startDate', 'Start Date')}}
+      @if($errors->has('startDate'))
+        <p class="red-text">{{$errors->first('startDate')}}</p> 
+       @endif
     </div>
   </div>
 
   <div class="row">
     <div class="input-field col s4">
-      {{Form::date('finishDate', date($course->startDate), ['class'=>'datepicker'])}}
+      {{Form::date('finishDate', \Carbon\Carbon::now(), ['class'=>'datepicker'])}}
       {{Form::label('finishDate', 'Finish Date')}}
+      @if($errors->has('finishDate'))
+        <p class="red-text">{{$errors->first('finishDate')}}</p> 
+       @endif
     </div>
   </div>
 
@@ -33,22 +44,13 @@
     <div class="input-field col s4">
       {{Form::textarea('textarea1', null, ['class'=>'materialize-textarea'])}}
       {{Form::label('textarea1', 'Description')}}
+      @if($errors->has('description'))
+        <p class="red-text">{{$errors->first('description')}}</p> 
+       @endif
     </div>
   </div>
 
-  <div class="row">
-    <div class="input-field col s4">
-      {{Form::select('plateform',  [$course->plateform,'placeholder' => 'Choose a plateform...'])}}
-      {{Form::label('plateform', 'Plateform')}}
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="input-field col s4">
-      {{Form::select('category', ['Tuto'=>'Tutorial', 'C'=>'Course'])}}
-      {{Form::label('category', 'Category')}}
-    </div>
-  </div>
 
   <div class="row">
     <div class="input-field col s4">

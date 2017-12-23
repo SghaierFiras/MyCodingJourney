@@ -20,8 +20,10 @@
               <p>{{$course->description}}</p>
             </div>
             <div class="card-action">
-              <a href="{{$course->url}}">View Course</a>
-              <a href="#">Edit Course</a>
+              <a href="{{$course->url}}">View Course</a><br>
+              <a href="{{url('/courses/edit/')}}">Edit Course</a><br>
+              <a href="{{url('/courses/delete')}}">Delete Article</a> 
+
             </div>
           </div>
         </div>

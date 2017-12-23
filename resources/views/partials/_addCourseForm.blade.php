@@ -1,5 +1,12 @@
    {!! Form::token() !!}
 
+   @if($errors->any())
+  <ul>
+    @foreach($errors->all() as $error)
+      <li class="red-text">{{$error}}</li>
+    @endforeach
+  </ul>
+@endif
   <div class="row">
     <div class="input-field col s4"> 
        {{ Form::text('title', null, ['class'=>'validate']) }}

@@ -18,7 +18,7 @@ class courseController extends Controller
         'startDate'=>'',
         'finishDate'=>'', 
         'category'=>'required',
-        'description'=>'required|max:255',
+        'description'=>'max:255',
     ];
     public function index(){
 
@@ -36,9 +36,9 @@ class courseController extends Controller
     }
 
     public function store(Request $request){
-        $this->validate($request, $this->rules);
+        // $this->validate($request, $this->rules);
         $course=Course::create($request->all());
-        return redirect()->action('courseController@index')->with('message', 'Course Added');
+        return redirect()->route('courseIndex')->with('message', 'Course Added');
     }
 
     //EDIT A COURSE

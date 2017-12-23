@@ -30,10 +30,6 @@ Route::resource('articles', 'articleController');
 Route::get('/tutorials', 'tutorialController@index')->name('tutorialIndex');
 
 
-// Route::get('/courses', function ()
-// {
-//     $x=["one"=>["one_1"=>1,"one_1"=>1,"one_1"=>1,"one_1"=>1,"one_1"=>1]];
-//     var_dump($x);
-//     return dd($x);
-//     return view::create('courses.index');
-// });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

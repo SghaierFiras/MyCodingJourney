@@ -35,11 +35,6 @@
             Laravel
         </div>
 
-        <div class="links">
-            <a href="{{route('courseIndex')}}">Courses</a>
-            <a href="{{route('articleIndex')}}">Articles</a>
-            <a href="{{route('tutorialIndex')}}">Tutorials</a>
-        </div>
     </div>
 </div>
     </body>

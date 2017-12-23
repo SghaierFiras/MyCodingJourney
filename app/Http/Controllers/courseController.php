@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 use Input;
 use Validator;
 use Redirect;
@@ -13,11 +14,11 @@ class courseController extends Controller
 
     protected $rules=[
         'title'=>'bail|required',
-        'plateform'=>'required',
+        'plateform'=>'',
         'url'=>'required', 
         'startDate'=>'',
         'finishDate'=>'', 
-        'category'=>'required',
+        'category'=>'',
         'description'=>'max:255',
     ];
     public function index(){
@@ -43,16 +44,16 @@ class courseController extends Controller
 
     //EDIT A COURSE
     public function edit(Request $request, $id=null){
-        dd($id);
-        $course=Course::find($id);
+        $course=Course::findOrFail($id);
         return view('courses.edit', ['course'=>$course]);
     } 
 
     public function update(Request $request, $id){
-
-        $course=Course::update($request::all());
+        
+        $this->validate($request, $this->rules);
+        $course=Course::whereId($id)->update($request->except(['_method', '_token']));
         Session::flash('message', 'Edit Course');
-        return redirect::action('courseController@index', $course->slug, $id);
+        return redirect()->route('courseIndex', $id);
 
     }
 

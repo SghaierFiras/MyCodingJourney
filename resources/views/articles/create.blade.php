@@ -7,9 +7,9 @@
  
 <div class="container"> 
 
-  {{ Form::model($article, array('url'=>'articles/store', 'method'=>'POST')) }} 
-  @include('articles/partials/_form', ['submit_text' => 'Add an Article']) 
-{{ Form::close() }} 
+  {{ Form::model($article, array('url'=>['articles/store', $article->id], 'method'=>'POST')) }} 
+    @include('partials/_addArticleForm', ['submit_text' => 'Add an Article']) 
+  {{ Form::close() }} 
 
 </div> 
 

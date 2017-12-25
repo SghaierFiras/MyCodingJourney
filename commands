@@ -21,3 +21,32 @@ php artisan make:controller tutorialController
 git push --set-upstream origin index-page
 git push origin master  --allow-unrelated-histories
 git remote set-url origin git@github.com:SghaierFiras/MyCodingJourney.git
+
+
+<!-- some shit to be done with later
+             edit the course-thumbnail dynamically 
+        @php
+        switch($course->category){
+          case 'Language':
+            switch($course->category->Language){
+              case 'PHP' : echo `change background`;
+              break;
+              case 'Framework' : echo `change background`;
+              break;
+            }
+            case 'Framework':
+            switch($course->category->language){
+              case 'Language' : echo `change background`;
+              break;
+              case 'Framework' : echo `change background`;
+              break;
+            }
+            case 'Library':
+            switch($course->category->language){
+              case 'Language' : echo `change background`;
+              break;
+              case 'Framework' : echo `change background`;
+              break;
+            }
+        }
+        @endphp -->

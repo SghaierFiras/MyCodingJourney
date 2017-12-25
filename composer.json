@@ -6,9 +6,13 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "aura/session": "^2.1",
+        "doctrine/dbal": "^2.6",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.5",
+        "nesbot/carbon": "^1.22"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -32,8 +36,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {
@@ -51,6 +54,8 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "minimum-stability": "dev",
+        "phpdocumentor/reflection-docblock": "3.x@dev"
     }
 }

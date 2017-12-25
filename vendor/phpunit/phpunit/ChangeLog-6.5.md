@@ -2,6 +2,18 @@
 
 All notable changes of the PHPUnit 6.5 release series are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [6.5.5] - 2017-12-17
+
+### Fixed
+
+* Fixed [#2922](https://github.com/sebastianbergmann/phpunit/issues/2922): Test class is not discovered when there is a test class with `@group` and provider throwing exception in it, tests are run with `--exclude-group` for that group, there is another class called later (after the class from above), and the name of that another class does not match its filename
+
+## [6.5.4] - 2017-12-10
+
+### Changed
+
+* Require version 5.0.5 of `phpunit/phpunit-mock-objects` for [phpunit-mock-objects#394](https://github.com/sebastianbergmann/phpunit-mock-objects/issues/394)
+
 ## [6.5.3] - 2017-12-06
 
 ### Fixed
@@ -30,6 +42,15 @@ All notable changes of the PHPUnit 6.5 release series are documented in this fil
 * Fixed [#2654](https://github.com/sebastianbergmann/phpunit/issues/2654): Problems with `assertJsonStringEqualsJsonString()`
 * Fixed [#2810](https://github.com/sebastianbergmann/phpunit/pull/2810): Code Coverage for PHPT tests does not work
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+[6.5.5]: https://github.com/sebastianbergmann/phpunit/compare/6.5.4...6.5.5
+=======
+>>>>>>> 4bf63ef089ea469563ce584aa1fb2ee0d001a950
+=======
+[6.5.5]: https://github.com/sebastianbergmann/phpunit/compare/6.5.4...6.5.5
+>>>>>>> c4534c0eaae365aedc913e42fd70bdfcf63889b3
+[6.5.4]: https://github.com/sebastianbergmann/phpunit/compare/6.5.3...6.5.4
 [6.5.3]: https://github.com/sebastianbergmann/phpunit/compare/6.5.2...6.5.3
 [6.5.2]: https://github.com/sebastianbergmann/phpunit/compare/6.5.1...6.5.2
 [6.5.1]: https://github.com/sebastianbergmann/phpunit/compare/6.5.0...6.5.1

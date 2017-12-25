@@ -15,14 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/courses', 'courseController@index')->name('courseIndex');
-Route::get('/articles', 'articleController@index')->name('articleIndex');
-Route::get('/tutorials', 'tutorialController@index')->name('tutorialIndex');
-
-
-// Route::get('/courses', function ()
-// {
-//     $x=["one"=>["one_1"=>1,"one_1"=>1,"one_1"=>1,"one_1"=>1,"one_1"=>1]];
-//     var_dump($x);
-//     return dd($x);
-//     return view::create('courses.index');
-// });
+Route::get('/courses/create', 'courseController@create')->name('courseCreate');
+Route::post('/courses/store', 'courseController@store')->name('courseStore');
+Route::get('/courses/edit/{id}', 'courseController@edit')->name('courseEdit');
+Route::patch('/courses/update/{id}', 'courseController@update')->name('courseUpdate');
+Route::delete('/courses/delete', 'courseController@delete')->name('courseDelete');

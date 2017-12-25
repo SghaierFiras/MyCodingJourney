@@ -14,26 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/courses', 'courseController@index')->name('courseIndex');
 
-Route::resource('articles', 'articleController');
-
-// Route::get('/articles', 'articleController@index')->name('articleIndex');
-// Route::get('/articles/create', 'articleController@create')->name('articleCreate');
-// Route::post('/articles/store', 'articleController@store')->name('articleStore');
-// Route::put('/articles/update', 'articleController@update')->name('articleUpdate');
-// Route::get('/articles/show', 'articleController@show')->name('articleShow');
-// Route::delete('/articles/delete/{id}', 'articleController@delete')->name('articleDelete');
-
-
-
-Route::get('/tutorials', 'tutorialController@index')->name('tutorialIndex');
-
-
-// Route::get('/courses', function ()
-// {
-//     $x=["one"=>["one_1"=>1,"one_1"=>1,"one_1"=>1,"one_1"=>1,"one_1"=>1]];
-//     var_dump($x);
-//     return dd($x);
-//     return view::create('courses.index');
-// });
+Route::get('/articles', 'articleController@index')->name('articleIndex');
+Route::get('/articles/create', 'articleController@create')->name('articleCreate');
+Route::post('/articles/store', 'articleController@store')->name('articleStore');
+Route::get('/articles/edit/{id}', 'articleController@edit')->name('articleEdit');
+Route::patch('/articles/update/{id}', 'articleController@update')->name('articleUpdate');
+Route::delete('/articles/delete', 'articleController@delete')->name('articleDelete');

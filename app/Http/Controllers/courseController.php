@@ -37,7 +37,7 @@ class courseController extends Controller
     }
 
     public function store(Request $request){
-        // $this->validate($request, $this->rules);
+        $this->validate($request, $this->rules);
         $course=Course::create($request->all());
         return redirect()->route('courseIndex')->with('message', 'Course Added');
     }

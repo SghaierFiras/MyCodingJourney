@@ -25,7 +25,6 @@ class articleController extends Controller
     public function index(){
         $articles= Article::all();
         return view('articles.index', ['articles'=>$articles]);
-        dd($articles);
     }
 
     //ADD NEW ARTICLE

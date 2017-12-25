@@ -10,7 +10,12 @@
   <div class="row"> 
     @if( !$articles->count() ) 
       <p> You haven't add any Articles yet !</p> 
-    @else   
+    @else  
+    
+    @if(Session::has('message'))
+      <div class="card-panel green-text">{{Session::get('message')}}</div>
+    @endif 
+    
       @foreach($articles as $article) 
         <div class="col s3"> 
           <div class="card blue-grey darken-1"> 
@@ -20,8 +25,12 @@
             </div> 
             <div class="card-action"> 
               <a href="{{$article->url}}">View Article</a><br>
-              <a href="{{url('/articles/edit')}}">Edit Article</a> 
-              <a href="{{url('/articles/delete')}}">Delete Article</a> 
+              <a href="{{url('/articles/edit', $article->id)}}">Edit Article</a> 
+              <a href="{{url('/articles/delete', $article->id)}}">
+              {{ Form::model($article, array('url'=>['articles', $article->id], 'method'=>'DELETE')) }}
+                {{Form::submit('Delete Article')}}
+              {{ Form::close() }}
+              </a> 
             </div> 
           </div> 
         </div> 

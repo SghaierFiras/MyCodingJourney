@@ -26,7 +26,10 @@
             <div class="card-action">
               <a href="{{$course->url}}">View Course</a><br>
               <a href="{{url('/courses/edit', $course->id)}}">Edit Course</a><br>
-              <a href="{{url('/courses/delete', $course->id)}}">Delete Article</a> 
+              <a href="{{url('/courses/delete', $course->id)}}">
+              {{ Form::model($course, array('url'=>['courses', $course->id], 'method'=>'DELETE')) }}
+                {{Form::submit('Delete Course')}}
+              {{ Form::close() }} </a>
 
             </div>
           </div>

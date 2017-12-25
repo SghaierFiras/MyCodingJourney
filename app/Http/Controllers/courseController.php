@@ -59,7 +59,9 @@ class courseController extends Controller
 
     //DELETE A COURSE
     public function delete($id){
-        $course=Course::find($id);
+        $course=Course::findOrFail($id)->delete();
+        Session::flash('message', 'course Deleted Succefully!');
+        return redirect()->route('courseIndex');
         
     }
     

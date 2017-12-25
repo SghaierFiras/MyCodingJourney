@@ -19,3 +19,4 @@ Route::get('/courses/create', 'courseController@create')->name('courseCreate');
 Route::post('/courses/store', 'courseController@store')->name('courseStore');
 Route::get('/courses/edit/{id}', 'courseController@edit')->name('courseEdit');
 Route::patch('/courses/update/{id}', 'courseController@update')->name('courseUpdate');
+Route::delete('/courses/delete', 'courseController@delete')->name('courseDelete');

@@ -8,7 +8,7 @@
 <div class="container">
 
 {{ Form::model($course, array('url'=>'courses/store')) }}
-  @include('courses/partials/_form', ['submit_text' => 'Add a Course'])
+  @include('partials/_addCourseForm', ['submit_text' => 'Add a Course'])
 {{ Form::close() }}
 
 </div>

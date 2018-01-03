@@ -825,16 +825,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.25",
+            "version": "v5.5.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0a5b6112f325c56ae5a6679c08a0a10723153fe0"
+                "reference": "d7e6a7aab600c5cfae595ea22074ac3c536cbc28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0a5b6112f325c56ae5a6679c08a0a10723153fe0",
-                "reference": "0a5b6112f325c56ae5a6679c08a0a10723153fe0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d7e6a7aab600c5cfae595ea22074ac3c536cbc28",
+                "reference": "d7e6a7aab600c5cfae595ea22074ac3c536cbc28",
                 "shasum": ""
             },
             "require": {
@@ -955,7 +955,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-12-11T14:59:28+00:00"
+            "time": "2017-12-18T14:15:59+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3604,8 +3604,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
-<<<<<<< HEAD
             "version": "6.5.5",
             "source": {
                 "type": "git",
@@ -3616,19 +3614,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/83d27937a310f2984fd575686138597147bdc7df",
                 "reference": "83d27937a310f2984fd575686138597147bdc7df",
-=======
-            "version": "6.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "1b2f933d5775f9237369deaa2d2bfbf9d652be4c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1b2f933d5775f9237369deaa2d2bfbf9d652be4c",
-                "reference": "1b2f933d5775f9237369deaa2d2bfbf9d652be4c",
->>>>>>> 4bf63ef089ea469563ce584aa1fb2ee0d001a950
-=======
             "version": "6.5.5",
             "source": {
                 "type": "git",
@@ -3639,7 +3624,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/83d27937a310f2984fd575686138597147bdc7df",
                 "reference": "83d27937a310f2984fd575686138597147bdc7df",
->>>>>>> c4534c0eaae365aedc913e42fd70bdfcf63889b3
                 "shasum": ""
             },
             "require": {
@@ -3710,16 +3694,8 @@
                 "testing",
                 "xunit"
             ],
-<<<<<<< HEAD
-<<<<<<< HEAD
             "time": "2017-12-17T06:31:19+00:00"
-=======
-            "time": "2017-12-10T08:06:19+00:00"
->>>>>>> 4bf63ef089ea469563ce584aa1fb2ee0d001a950
-=======
-            "time": "2017-12-17T06:31:19+00:00"
->>>>>>> c4534c0eaae365aedc913e42fd70bdfcf63889b3
-        },
+        }
         {
             "name": "phpunit/phpunit-mock-objects",
             "version": "5.0.5",
@@ -3778,7 +3754,7 @@
                 "xunit"
             ],
             "time": "2017-12-10T08:01:53+00:00"
-        },
+        }
         {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",

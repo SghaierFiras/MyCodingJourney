@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Article' => $baseDir . '/app/Article.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Course' => $baseDir . '/app/Course.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -29,7 +28,6 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
-    'App\\Tutorial' => $baseDir . '/app/Tutorial.php',
     'App\\User' => $baseDir . '/app/User.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
@@ -1727,6 +1725,7 @@ return array(
     'Illuminate\\Support\\NamespacedItemResolver' => $vendorDir . '/laravel/framework/src/Illuminate/Support/NamespacedItemResolver.php',
     'Illuminate\\Support\\Optional' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Optional.php',
     'Illuminate\\Support\\Pluralizer' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Pluralizer.php',
+    'Illuminate\\Support\\ProcessUtils' => $vendorDir . '/laravel/framework/src/Illuminate/Support/ProcessUtils.php',
     'Illuminate\\Support\\ServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Support/ServiceProvider.php',
     'Illuminate\\Support\\Str' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Str.php',
     'Illuminate\\Support\\Testing\\Fakes\\BusFake' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Testing/Fakes/BusFake.php',

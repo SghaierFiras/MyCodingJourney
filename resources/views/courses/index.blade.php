@@ -12,6 +12,10 @@
     @if( !$courses->count() )
       <p> You haven't add any Courses yet !</p>
     @else  
+      @if(Session::has('message'))
+        <div class="card-panel green-text">{{Session::get('message')}}</div>
+      
+      @endif
       @foreach($courses as $course)
         <div class="col s3">
           <div class="card blue-grey darken-1">
@@ -21,8 +25,11 @@
             </div>
             <div class="card-action">
               <a href="{{$course->url}}">View Course</a><br>
-              <a href="{{url('/courses/edit/')}}">Edit Course</a><br>
-              <a href="{{url('/courses/delete')}}">Delete Article</a> 
+              <a href="{{url('/courses/edit', $course->id)}}">Edit Course</a><br>
+              <a href="{{url('/courses/delete', $course->id)}}">
+              {{ Form::model($course, array('url'=>['courses', $course->id], 'method'=>'DELETE')) }}
+                {{Form::submit('Delete Course')}}
+              {{ Form::close() }} </a>
 
             </div>
           </div>

@@ -14,22 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/courses', 'courseController@index')->name('courseIndex');
-
-Route::resource('articles', 'articleController');
-
-// Route::get('/articles', 'articleController@index')->name('articleIndex');
-// Route::get('/articles/create', 'articleController@create')->name('articleCreate');
-// Route::post('/articles/store', 'articleController@store')->name('articleStore');
-// Route::put('/articles/update', 'articleController@update')->name('articleUpdate');
-// Route::get('/articles/show', 'articleController@show')->name('articleShow');
-// Route::delete('/articles/delete/{id}', 'articleController@delete')->name('articleDelete');
-
-
 
 Route::get('/tutorials', 'tutorialController@index')->name('tutorialIndex');
+<<<<<<< HEAD
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::get('/tutorials/create', 'tutorialController@create')->name('tutorialCreate');
+Route::post('/tutorials/store', 'tutorialController@store')->name('tutorialsStore');
+Route::get('/tutorials/edit/{id}', 'tutorialController@edit')->name('tutorialEdit');
+Route::patch('/tutorials/update/{id}', 'tutorialController@update')->name('tutorialUpdate');
+Route::delete('/tutorials/delete', 'tutorialController@delete')->name('tutorialDelete');
+>>>>>>> master

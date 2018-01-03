@@ -7,15 +7,13 @@
 
         <title>My Coding Journey</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <!-- stylesheets -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'/>
+        <link href="{!! url('css/style.css') !!}" rel="stylesheet">
+        <link rel="styelesheet" href="{!! url('fonts/fontawesome.scss') !!}">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="../../assets/sass/app.scss">
-        <link rel="stylesheet" href="../assets/sass/app.scss">
-        <link rel="stylesheet" href="{!! url('css/materialize.min.css') !!}">
-        <link rel="stylesheet" href="{!! url('css/style.css') !!}">
-        <link rel="stylesheet" href="../assets/sass/app.scss">
+        <!-- fonts & ions -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
     <div class="flex-center position-ref full-height">
@@ -35,7 +33,21 @@
             Laravel
         </div>
 
+        <div class="links">
+            <a href="#">Courses</a>
+            <a href="#">Articles</a>
+            <a href="#">Tutorials</a>
+        </div>
     </div>
 </div>
     </body>
+    <!-- stylesheets -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'/>
+    <link href="{!! url('css/style.css') !!}" rel="stylesheet">
+    <link rel="styelesheet" href="{!! url('fonts/fontawesome.scss') !!}">
+
+    <!-- fonts & ions -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js">
+    </script>
 </html>

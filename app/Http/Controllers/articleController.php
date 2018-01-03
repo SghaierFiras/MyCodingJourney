@@ -12,43 +12,50 @@ use Mail;
 use App\Article;
 class articleController extends Controller
 {
+
+    protected $rules=[
+        'title'=>'bail|required',
+        'plateform'=>'', 
+        'url'=>'required',
+        'readDate'=>'required',
+        'description'=>'max:255'
+    ];
+
     //SHOW ALL ARTICLES
     public function index(){
         $articles= Article::all();
         return view('articles.index', ['articles'=>$articles]);
-        dd($articles);
     }
 
     //ADD NEW ARTICLE
     public function create(Article $article){
 
-        //create a new article
-        $plateforms=Article::select('plateform');
         $article=new Article;
         return view('articles.create', ['article'=>$article]);
     }
 
     public function store(Request $request){
 
-        // $id=Input::get('plateform');
+        $this->validate($request, $this->rules);
         $article=Article::create($request->all());
         Session::flash('message', 'Article Added');
-        return redirect()->action('articleController@index', $article->slug);
+        return redirect()->route('articleIndex')->with('message', 'Article added');
     }
     
 
     //EDIT AN ARTICLE
     public function edit(Request $request, $id){
         
-        $article=Article::find($id);
+        $article=Article::findOrFail($id);
         return view('articles.edit', ['article'=>$article]);
     }
 
     public function update(Request $request, $id){
     
-        $article=Article::update($request::all());
-        Session::flash('message', 'Edit Article');
-        return redirect()->action('articleController@index', $article->slug, $id);
+        $this->validate($request, $this->rules);
+        $article=Article::whereId($id)->update($request->except(['_method', '_token']));
+        Session::flash('message', 'Article edited succefully !');
+        return redirect()->route('articleIndex', $id);
 
     }
     
@@ -56,18 +63,13 @@ class articleController extends Controller
     //DELETE AN ARTICLE
     public function delete(){
         
-        $article=Article::find($id);
-        $article->delete();
+        $article=Article::findOrFail($id)->delete();
         Session::flash('message', 'Article Deleted !');
-        return redirect::route('articles.index');
+        return redirect()->route('articleIndex', $id);
     }
     
     
     //SHOW AN ARTICLE
     public function show($id){
-
-        //show an article
-        $article=Article::find($id);
-        return view('articles.show', ['article'=>$article]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 use Input;
 use Validator;
 use Redirect;
@@ -13,12 +14,12 @@ class courseController extends Controller
 
     protected $rules=[
         'title'=>'bail|required',
-        'plateform'=>'required',
+        'plateform'=>'',
         'url'=>'required', 
         'startDate'=>'',
         'finishDate'=>'', 
-        'category'=>'required',
-        'description'=>'required|max:255',
+        'category'=>'',
+        'description'=>'max:255',
     ];
     public function index(){
 
@@ -38,27 +39,29 @@ class courseController extends Controller
     public function store(Request $request){
         $this->validate($request, $this->rules);
         $course=Course::create($request->all());
-        return redirect()->action('courseController@index')->with('message', 'Course Added');
+        return redirect()->route('courseIndex')->with('message', 'Course Added');
     }
 
     //EDIT A COURSE
     public function edit(Request $request, $id=null){
-        dd($id);
-        $course=Course::find($id);
+        $course=Course::findOrFail($id);
         return view('courses.edit', ['course'=>$course]);
     } 
 
     public function update(Request $request, $id){
-
-        $course=Course::update($request::all());
+        
+        $this->validate($request, $this->rules);
+        $course=Course::whereId($id)->update($request->except(['_method', '_token']));
         Session::flash('message', 'Edit Course');
-        return redirect::action('courseController@index', $course->slug, $id);
+        return redirect()->route('courseIndex', $id);
 
     }
 
     //DELETE A COURSE
     public function delete($id){
-        $course=Course::find($id);
+        $course=Course::findOrFail($id)->delete();
+        Session::flash('message', 'course Deleted Succefully!');
+        return redirect()->route('courseIndex');
         
     }
     

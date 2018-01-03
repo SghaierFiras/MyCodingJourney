@@ -7,11 +7,10 @@
 
 <div class="container">
 
-{{ Form::model($course, array('url'=>'courses/update', 'method'=>'PUT')) }}
-  @include('partials/_addCourseForm', ['submit_text' => 'Edit a Course'])
+{{ Form::model($course, array('url'=>['courses/update', $course->id], 'method'=>'PATCH')) }}
+  @include('partials/_addCourseForm', ['submit_text' => 'Edit course'])
 {{ Form::close() }}
 
 </div>
-
 
 @endsection

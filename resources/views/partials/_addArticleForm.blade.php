@@ -30,8 +30,8 @@
  
   <div class="row"> 
     <div class="input-field col s4"> 
-      {{Form::textarea('textarea1', null, ['class'=>'materialize-textarea'])}} 
-      {{Form::label('textarea1', 'Description')}} 
+      {{Form::textarea('description', null, ['class'=>'materialize-textarea'])}} 
+      {{Form::label('description', 'Description')}} 
     </div> 
   </div> 
  

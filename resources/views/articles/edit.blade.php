@@ -6,7 +6,7 @@
  
 <div class="container"> 
 
-  {{ Form::model($article, array('url'=>'articles/update', 'method'=>'PUT')) }} 
+  {{ Form::model($article, array('url'=>['articles/update', $article->id], 'method'=>'PATCH')) }} 
     @include('partials/_addArticleForm', ['submit_text' => 'Edit the Article']) 
   {{ Form::close() }} 
 

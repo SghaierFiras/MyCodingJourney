@@ -36,9 +36,9 @@
         </div>
 
         <div class="links">
-            <a href="#">Courses</a>
-            <a href="#">Articles</a>
-            <a href="#">Tutorials</a>
+            <a href="{{ route('courseIndex') }}">Courses</a>
+            <a href="{{ route('articleIndex') }}">Articles</a>
+            <a href="{{ route('tutorialIndex') }}">Tutorials</a>
         </div>
     </div>
 </div>

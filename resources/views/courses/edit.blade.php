@@ -8,10 +8,9 @@
 <div class="container">
 
 {{ Form::model($course, array('url'=>['courses/update', $course->id], 'method'=>'PATCH')) }}
-  @include('partials/_addCourseForm', ['submit_text' => 'Course Edited Succefully!'])
+  @include('partials/_addCourseForm', ['submit_text' => 'Edit course'])
 {{ Form::close() }}
 
 </div>
-
 
 @endsection

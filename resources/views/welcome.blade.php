@@ -36,11 +36,13 @@
         </div>
 
         <div class="links">
-            <a href="{{route('courseIndex')}}">Courses</a>
-            <a href="{{route('articleIndex')}}">Articles</a>
-            <a href="{{route('tutorialIndex')}}">Tutorials</a>
+            <a href="#">Courses</a>
+            <a href="#">Articles</a>
+            <a href="#">Tutorials</a>
         </div>
     </div>
 </div>
     </body>
+    <script type="text/javascript" src="cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js">
+    </script>
 </html>
